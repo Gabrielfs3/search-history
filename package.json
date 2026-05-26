@@ -3,10 +3,26 @@
   "displayName": "Search History",
   "description": "Search history panel for VS Code",
   "version": "0.0.1",
+  "publisher": "jackore",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gabrielfs3/search-history"
+  },
+  "homepage": "https://github.com/Gabrielfs3/search-history",
+  "bugs": {
+    "url": "https://github.com/Gabrielfs3/search-history/issues"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
-  "categories": ["Other"],
+  "categories": ["Productivity"],
+  "keywords": [
+    "search",
+    "history",
+    "find",
+    "productivity"
+  ],
   "activationEvents": [
     "onCommand:extension.searchWithHistory",
     "onView:searchHistoryView"
