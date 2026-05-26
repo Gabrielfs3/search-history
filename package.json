@@ -1,0 +1,75 @@
+{
+  "name": "search-history",
+  "displayName": "Search History",
+  "description": "Search history panel for VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:extension.searchWithHistory",
+    "onView:searchHistoryView"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.searchWithHistory",
+        "title": "Search (with history)"
+      },
+      {
+        "command": "extension.deleteHistoryItem",
+        "title": "Delete"
+      },
+      {
+        "command": "extension.clearHistory",
+        "title": "Clear All"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+shift+f",
+        "command": "extension.searchWithHistory",
+        "when": "true"
+      },
+      {
+        "key": "ctrl+shift+h",
+        "command": "searchHistoryView.focus"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "searchHistoryContainer",
+          "title": "Search History",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "searchHistoryContainer": [
+        {
+          "id": "searchHistoryView",
+          "name": "History"
+        }
+      ]
+    },
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "extension.deleteHistoryItem",
+          "when": "view == searchHistoryView",
+          "group": "inline"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "extension.clearHistory",
+          "when": "view == searchHistoryView",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}
