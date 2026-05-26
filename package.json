@@ -1,7 +1,7 @@
 {
-  "name": "search-history",
-  "displayName": "Search History",
-  "description": "Search history panel for VS Code",
+  "name": "search-history-embedded",
+  "displayName": "Search History Embedded",
+  "description": "Search history panel for VS Code like MPLab",
   "version": "0.0.1",
   "publisher": "jackore",
   "license": "MIT",
@@ -16,7 +16,7 @@
   "engines": {
     "vscode": "^1.80.0"
   },
-  "categories": ["Productivity"],
+  "categories": ["Other"],
   "keywords": [
     "search",
     "history",
